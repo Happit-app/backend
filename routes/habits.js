@@ -46,7 +46,7 @@ router.put('/:id/update', function(req, res, next) {
 
 router.delete('/:id/delete', function(req, res, next) {
   Habits.delete(req.params.id).then( (data) => {
-    res.send(data);
+    res.sendStatus(204);
   });
 });
 
